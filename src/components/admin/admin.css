@@ -1,0 +1,56 @@
+.admin__left{
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    border-right: 6px solid black !important;
+    margin-right: 200px;
+    min-width: 50%;
+}
+.admin__right{
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+}
+.container{
+    display: flex;
+    flex-direction:row;
+}
+.home{
+    height: 100vh !important;
+    width: 100%;
+    overflow-y: hidden;
+    background-color: #FECC00 !important;
+    background: url('../../imgandsound/Flugroute_Waben_links.png'); 
+}
+.input{
+ width: 200px;
+ height : 50px;
+}
+.button{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:23px;
+}
+.button:hover {
+    background: #fff168;
+    cursor: pointer;
+  }
+.error{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color : red;
+}
+html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .footer{
+      margin-top: 10px;
+  }
+  .list{
+      font-size: 15px;
+      border: 2px solid black;
+  }
