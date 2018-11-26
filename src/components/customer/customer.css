@@ -1,0 +1,28 @@
+.customer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    font-weight: 700;
+}
+.customer__empty{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+}
+.number__customer{
+    font-size: 120px;
+}
+.home__customer{
+    height: 100vh !important;
+    width: 100%;
+    overflow-y: hidden;
+    background-color: #FECC00 !important;
+    background: url('../../imgandsound/bb_restaurant_01-1024x639\ .jpg'); 
+    background-size: cover;
+}
+.home__order{
+    height: 100vh !important;
+    width: 100%;
+    overflow-y: hidden;
+    background-color: #FECC00 !important;
+    background: url('../../imgandsound/Flugroute_Waben_links.png'); 
+    border:4px solid #FECC00;
+}
