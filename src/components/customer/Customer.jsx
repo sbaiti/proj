@@ -15,7 +15,7 @@ class Customer extends React.Component {
 
     componentDidMount() {
         setInterval(() => {
-            axios.get('http://localhost:3001/api/orders')
+            axios.get('http://localhost:4000/api/orders')
                 .then(res => {
                     const orders = res.data;
                     if (!isEqual(orders, this.state.orders)) {
