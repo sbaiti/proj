@@ -39,11 +39,11 @@ class Admin extends React.Component {
     const order = this.state.order;
     if (!this.state.is_emty) {
       if (!verifTabOrder(this.state.tab_order, order.num_order)) {
-        axios.post("/api/order", { order }).then(res => {
+        axios.post("http://localhost:4000/api/order", { order }).then(res => {
           console.log("success", res);
         });
         setTimeout(() => {
-          axios.get("/api/orders").then(res => {
+          axios.get("http://localhost:4000/api/orders").then(res => {
             const orders = res.data;
             this.setState(
               {
@@ -68,7 +68,7 @@ class Admin extends React.Component {
 
   deleteAllOrders = event => {
     event.preventDefault();
-    axios.delete("/api/orders/delete").then(res => {
+    axios.delete("http://localhost:4000/api/orders/delete").then(res => {
       this.setState({ tab_order: [] });
       console.log("succes", res);
     });
@@ -79,15 +79,15 @@ class Admin extends React.Component {
       event.preventDefault();
       this.state.selectedOption.map((order, index) =>
         axios
-          .delete(`/api/orders/delete/:${order.id}`)
+          .delete(`http://localhost:4000/api/orders/delete/:${order.id}`)
           .then(res => {
             console.log("success", res);
           })
       );
       setTimeout(() => {
-        axios.get("/api/orders").then(res => {
+        axios.get("http://localhost:4000/api/orders").then(res => {
           const orders = res.data;
-          this.setState({ tab_order: orders });
+          this.setState({ tab_order: orders, selectedOption: [] });
         });
       }, 500);
     }
@@ -98,7 +98,7 @@ class Admin extends React.Component {
   }
   componentDidMount() {
     setTimeout(() => {
-      axios.delete("/api/orders/delete").then(res => {
+      axios.delete("http://localhost:4000/api/orders/delete").then(res => {
         this.setState({ tab_order: [] });
         console.log("succes", res);
       });
